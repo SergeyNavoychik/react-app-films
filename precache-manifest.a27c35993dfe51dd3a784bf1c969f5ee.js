@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/react-app-films/static/media/fa-regular-400.323b749d.ttf"
   },
   {
-    "revision": "500d0392c70363b7360d",
+    "revision": "0766018f6bf783a53b53",
     "url": "/react-app-films/static/css/main.4e721099.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/react-app-films/static/media/fa-regular-400.ec813c5b.eot"
   },
   {
-    "revision": "500d0392c70363b7360d",
-    "url": "/react-app-films/static/js/main.500d0392.chunk.js"
+    "revision": "0766018f6bf783a53b53",
+    "url": "/react-app-films/static/js/main.0766018f.chunk.js"
   },
   {
     "revision": "59ea9019c9b9bc4d83ab9783e830735c",
@@ -44,19 +44,19 @@ self.__precacheManifest = [
     "url": "/react-app-films/static/media/fa-regular-400.e54c6ae1.svg"
   },
   {
-    "revision": "b9c86e3abec102a2c9910dfac85c1c17",
-    "url": "/react-app-films/static/media/fa-solid-900.b9c86e3a.ttf"
-  },
-  {
     "revision": "f9103ae53b2dbcb0a14605eebc90a2ce",
     "url": "/react-app-films/static/media/fa-solid-900.f9103ae5.eot"
+  },
+  {
+    "revision": "b9c86e3abec102a2c9910dfac85c1c17",
+    "url": "/react-app-films/static/media/fa-solid-900.b9c86e3a.ttf"
   },
   {
     "revision": "1eba168c1b8603ab4dd282f5633d4650",
     "url": "/react-app-films/static/media/fa-solid-900.1eba168c.svg"
   },
   {
-    "revision": "2d263e5de7b71cd43741b80ef5beb425",
+    "revision": "daf5313c9653168d7c8081013ddda5c3",
     "url": "/react-app-films/index.html"
   }
 ];
