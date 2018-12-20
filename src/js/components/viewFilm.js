@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import ItemFilmCard from './itemFilmCard';
 import axios from 'axios';
 
@@ -15,7 +15,7 @@ class ViewFilm extends Component {
         this.getFilmData();
     }
     getFilmData(){
-        axios.get(`http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_KEY}&t=kingdom`)
+        axios.get(`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_KEY}&i=tt3673794`)
             .then( ( { data } ) => {
                 let filmData = {
                     title: data.Title,
@@ -33,7 +33,6 @@ class ViewFilm extends Component {
                     error,
                     isLoading: false
                 })
-
             })
     }
 
@@ -41,10 +40,12 @@ class ViewFilm extends Component {
         let { isLoading, filmData, error } = this.state;
 
         return (
-            <div className="row">
-                { error && <div className="alert alert-danger" role="alert">{ error }</div>}
-                { !isLoading && !error && <ItemFilmCard {...filmData}/> }
-                { isLoading && <div className="fa-1x col-12 text-center"><i className="fas fa-spinner fa-spin"/></div> }
+            <div className="container">
+                <div className="row">
+                    { error && <div className="col-12"><div className="alert alert-danger" role="alert">{ error }</div></div>}
+                    { filmData && <ItemFilmCard {...filmData}/> }
+                    { isLoading && <div className="fa-2x spinner-absolute-center"><i className="fas fa-spinner fa-spin"/></div> }
+                </div>
             </div>
         )
     }
