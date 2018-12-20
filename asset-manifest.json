@@ -1,14 +1,14 @@
 {
-  "main.css": "/react-app-films/static/css/main.4e721099.chunk.css",
-  "main.js": "/react-app-films/static/js/main.0766018f.chunk.js",
-  "main.js.map": "/react-app-films/static/js/main.0766018f.chunk.js.map",
+  "main.css": "/react-app-films/static/css/main.0b923eee.chunk.css",
+  "main.js": "/react-app-films/static/js/main.a6c3a190.chunk.js",
+  "main.js.map": "/react-app-films/static/js/main.a6c3a190.chunk.js.map",
   "static/js/1.12cdaf7b.chunk.js": "/react-app-films/static/js/1.12cdaf7b.chunk.js",
   "static/js/1.12cdaf7b.chunk.js.map": "/react-app-films/static/js/1.12cdaf7b.chunk.js.map",
   "runtime~main.js": "/react-app-films/static/js/runtime~main.251a58bf.js",
   "runtime~main.js.map": "/react-app-films/static/js/runtime~main.251a58bf.js.map",
-  "static/media/index.scss": "/react-app-films/static/media/fa-regular-400.06b3153d.woff",
-  "static/css/main.4e721099.chunk.css.map": "/react-app-films/static/css/main.4e721099.chunk.css.map",
+  "static/media/index.scss": "/react-app-films/static/media/fa-regular-400.323b749d.ttf",
+  "static/css/main.0b923eee.chunk.css.map": "/react-app-films/static/css/main.0b923eee.chunk.css.map",
   "index.html": "/react-app-films/index.html",
-  "precache-manifest.a27c35993dfe51dd3a784bf1c969f5ee.js": "/react-app-films/precache-manifest.a27c35993dfe51dd3a784bf1c969f5ee.js",
+  "precache-manifest.9c2558e4270d235b67053ecfaf1a9a69.js": "/react-app-films/precache-manifest.9c2558e4270d235b67053ecfaf1a9a69.js",
   "service-worker.js": "/react-app-films/service-worker.js"
 }
