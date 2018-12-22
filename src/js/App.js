@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/common/header';
 import Footer from './components/common/footer';
-import ViewFilm from './components/viewFilm';
+import ListOfFilms from './components/listOfFilms/listOfFilms';
 
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
         <div className="app-container">
             <Header/>
             <main>
-                <ViewFilm/>
+                <ListOfFilms/>
             </main>
             <Footer/>
         </div>
