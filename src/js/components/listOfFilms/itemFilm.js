@@ -27,6 +27,7 @@ function ItemFilm ({ filmData, onClickEditFilm }){
 ItemFilm.propTypes = {
     onClickEditFilm: PropTypes.func.isRequired,
     filmData: PropTypes.shape({
+        Poster: PropTypes.string.isRequired,
         Title: PropTypes.string.isRequired,
         Year: PropTypes.oneOfType([
             PropTypes.number,
