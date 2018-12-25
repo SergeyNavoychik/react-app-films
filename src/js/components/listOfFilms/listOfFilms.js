@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import classNames from 'classnames';
+import withFetchedData from '../../helpers/withFetchedData';
 import ItemFilm from './itemFilm';
 import EditFilm from './editFilm';
 
@@ -8,32 +8,9 @@ class ListOfFilms extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            filmsData: [],
             viewType: 'list',
             filmDataForEdit: null,
-            isLoading: true,
-            error: null,
         };
-    }
-    componentDidMount(){
-        this.getFilmsData();
-    }
-    getFilmsData = () => {
-        axios.get(`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_KEY}&s=game`)
-            .then( ( { data } ) => {
-                let filmsData = data.Search;
-                this.setState({
-                    filmsData,
-                    isLoading: false
-                })
-            })
-        .catch( err => {
-                let error = err.response.data.Error;
-                this.setState({
-                    error,
-                    isLoading: false
-                })
-            })
     }
     handleEditFilm = filmDataForEdit => {
         this.setState({
@@ -48,12 +25,8 @@ class ListOfFilms extends Component {
         });
     }
     handleSaveEditResults = newFilmData => {
-        let filmsData = this.state.filmsData.map( film => {
-            if(film.imdbID === newFilmData.imdbID) return newFilmData;
-            else return film;
-        })
+        this.props.onEditFetchedData( newFilmData );
         this.setState({
-            filmsData,
             viewType: 'list',
             filmDataForEdit: null
         })
@@ -65,13 +38,12 @@ class ListOfFilms extends Component {
                     filmData={item}/>
     }
     render() {
-        let { isLoading, filmsData, error, viewType, filmDataForEdit } = this.state;
+        let { viewType, filmDataForEdit } = this.state,
+            { fetchedData: filmsData } = this.props;
 
         return (
             <div className="container">
                 <div className={ classNames( 'row', { 'justify-content-center': viewType === 'editList' } ) }>
-                    { isLoading && <div className="fa-2x spinner-absolute-center"><i className="fas fa-spinner fa-spin"/></div> }
-                    { error && <div className="col-12"><div className="alert alert-danger" role="alert">{ error }</div></div>}
                     { viewType === 'list' && filmsData.map( this.mapFilmsData ) }
                     { viewType === 'editList' && <EditFilm
                                                         onClose={ this.handleCloseEdit}
@@ -83,4 +55,6 @@ class ListOfFilms extends Component {
     }
 }
 
-export default ListOfFilms;
+const apiUrl = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_KEY}&s=game`;
+const ListOfFilmsWithFetchedData = withFetchedData( apiUrl )( ListOfFilms );
+export default ListOfFilmsWithFetchedData;
