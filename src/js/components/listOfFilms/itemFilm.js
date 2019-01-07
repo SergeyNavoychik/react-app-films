@@ -1,32 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-function ItemFilm ({ filmData, onClickEditFilm }){
-    function handleClickEditFilm() {
-        onClickEditFilm(filmData);
-    }
+function ItemFilm ({ filmData, index }){
     return (
-        <div className="col-sm-6 col-md-4 col-lg-3 item-film-card">
-            <div className="item-film-card__content">
-                <img className="item-field-card__image" src={ filmData.Poster } alt="Card"/>
-                <div className="item-field-card__body">
-                    <div>
-                        <h5 className="body__title">{ filmData.Title }</h5>
-                        <p>{ filmData.Year }</p>
-                    </div>
-                    <div className="item-field-card__buttons">
-                        <button className="item-field-card__btn" onClick={handleClickEditFilm}>
-                            <i className="fas fa-pen"/>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <tr>
+            <th scope="row">{ index }</th>
+            <td>{ filmData.Title }</td>
+            <td>{ filmData.Year }</td>
+            <td>
+                <Link to={`/edit/${filmData.imdbID}`}><i className="fas fa-pen"/></Link>
+            </td>
+        </tr>
     )
 }
 ItemFilm.propTypes = {
-    onClickEditFilm: PropTypes.func.isRequired,
+    index: PropTypes.number.isRequired,
     filmData: PropTypes.shape({
+        imdbID: PropTypes.string.isRequired,
         Poster: PropTypes.string.isRequired,
         Title: PropTypes.string.isRequired,
         Year: PropTypes.oneOfType([

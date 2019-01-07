@@ -61,10 +61,27 @@ main{
     }
   }
   .item-field-card__btn{
+    background: rgb(221, 221, 221);
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
     color: #515151;
+  }
+}
+.sidebar-films{
+  .sidebar-films__title{
+    text-decoration: underline;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li a{
+      color: #000;
+      &.active{
+        color: #005cbf;
+      }
+    }
   }
 }
