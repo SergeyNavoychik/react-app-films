@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
-function SidebarFilms ({ films }){
+function SidebarFilms ({ films, baseUrl }){
     function handleMapFilms(film) {
         return(
             <li key={film.imdbID}>
-                <NavLink to={`/edit/${film.imdbID}`}>{ film.Title }</NavLink>
+                <NavLink to={`${baseUrl}/${film.imdbID}`}>{ film.Title }</NavLink>
             </li>
         )
     }
@@ -20,6 +20,7 @@ function SidebarFilms ({ films }){
     )
 }
 SidebarFilms.propTypes = {
+    baseUrl: PropTypes.string.isRequired,
     films: PropTypes.arrayOf(PropTypes.shape({
         Title: PropTypes.string.isRequired,
         imdbID: PropTypes.string.isRequired

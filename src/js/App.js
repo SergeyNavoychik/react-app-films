@@ -7,13 +7,14 @@ import Footer from './components/common/footer';
 import ListOfFilms from './components/listOfFilms/listOfFilms';
 import Dashboard from './components/dashboard/dashboard';
 import EditFilm from './components/editFilm/editFilm';
+import FilmInfo from './components/filmInfo/filmInfo';
 import Home from './components/common/home';
 
 class App extends Component {
     render() {
         return (
             <Provider store={ store }>
-                <Router>
+                <Router basename="/">
                     <div className="app-container">
                         <Header/>
                         <main>
@@ -23,6 +24,7 @@ class App extends Component {
                                     <Route path="/dashboard" component={Dashboard} />
                                     <Route path="/list" component={ListOfFilms} />
                                     <Route path="/edit/:id" component={EditFilm} />
+                                    <Route path="/film-info/:id" component={FilmInfo} />
                                 </Switch>
                             </div>
                         </main>

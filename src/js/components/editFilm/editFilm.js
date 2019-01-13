@@ -89,7 +89,7 @@ class EditFilm extends Component {
                             </form>
                         }
                     </div>
-                    <SidebarFilms films={ films }/>
+                    <SidebarFilms films={ films } baseUrl={'/edit'}/>
                 </div>
             </div>
         )

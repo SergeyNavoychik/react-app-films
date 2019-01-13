@@ -10,6 +10,7 @@ function ItemFilm ({ filmData, index }){
             <td>{ filmData.Year }</td>
             <td>
                 <Link to={`/edit/${filmData.imdbID}`}><i className="fas fa-pen"/></Link>
+                <Link to={`/film-info/${filmData.imdbID}`}><i className="fas fa-eye"/></Link>
             </td>
         </tr>
     )
