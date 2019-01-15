@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{71:function(n,e,t){"use strict";t.r(e),t.d(e,"default",function(){return r});var u=t(0),o=t.n(u);function r(){return o.a.createElement("div",null,"Home page")}}}]);
+//# sourceMappingURL=2.a7b4747d.chunk.js.map
